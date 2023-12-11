@@ -8,9 +8,9 @@ In your main.tf, add the following code:
 <!-- NOTE: The package-source and version x.x.x will be auto populated by the ci job. You do not need to change anything here. -->
 ```hcl
 
-# Create the LKE cluster
+# Create the LKE Networking
 module "lke" {
-  source = "./modules/lke"
+  source = "./modules/lke-networking"
   providers = {
     linode.default      = linode
   }
@@ -19,9 +19,9 @@ module "lke" {
   lke_cluster   = var.lke_cluster # Pass the LKE cluster configuration to the module
 }
 
-output "lke" {
-  description = "Important outputs from LKE cluster."
-  value = module.lke # Output from the lke module
+output "lke-networking" {
+  description = "Important outputs from LKE Network stack."
+  value = module.lke-networking # Output from the lke module
 }
 
 ```
