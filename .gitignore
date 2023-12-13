@@ -84,3 +84,4 @@ operations/variable-scripts/variable.json
 # .env files
 **/*.env
 scratch
+nodebalancer.tf
