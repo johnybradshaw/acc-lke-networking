@@ -9,8 +9,3 @@ output "lke_firewall_url" {
   description = "The link to the firewall created for the LKE cluster."
   value       = "https://cloud.linode.com/firewalls/${linode_firewall.lke_firewall.id}"
 }
-
-output "lke_nodebalancer" {
-  description = "The NodeBalancer created for the LKE cluster."
-  value       = linode_nodebalancer.lke_nodebalancer.id
-}
