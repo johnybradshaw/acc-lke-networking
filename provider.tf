@@ -12,5 +12,7 @@ terraform {
 }
 
 provider "linode" {
-  token = var.linode_config.api_token
+    alias = "default"
+
+    token = var.linode_config.api_token
 }
